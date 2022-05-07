@@ -13,17 +13,27 @@ def generateArt():
 
   # draw basic lines
   draw = ImageDraw.Draw(image)
-
+  points =[]
+  
+  # Generate the points.
   for i in range(10):
-    randomPoint1 = (
+    randomPoint = (
       random.randint(0, imageSizePx),
-      random.randint(0, imageSizePx)
-    )
-    randomPoint2 = (
       random.randint(0, imageSizePx),
-      random.randint(0, imageSizePx)
     )
-    lineXy = (randomPoint1, randomPoint2)
+    points.append(randomPoint)
+
+  # Draw the points.
+  for i, point in enumerate(points):
+    point1 = point
+    
+    if i == len(points) -1:
+      point2 = points[0]
+    else:
+      point2 = points[i+1]
+    
+
+    lineXy = (point1, point2)
     lineColor=(0,0,0)
     draw.line(lineXy, fill=(0,0,0), width=1)
 
