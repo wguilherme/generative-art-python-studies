@@ -10,6 +10,8 @@ def generateArt():
   imageSizePx = 128
   paddingPx = 16
   imageBgColor = (255, 255, 255)
+  startColor = randomColor()
+  endColor = randomColor()
   image = Image.new("RGB", 
   size=(imageSizePx, imageSizePx),
   color=imageBgColor)
@@ -38,7 +40,7 @@ def generateArt():
     
 
     lineXy = (point1, point2)
-    lineColor=randomColor()
+    lineColor=startColor
     thickness+=1
     draw.line(lineXy, fill=lineColor, width=thickness)
 
