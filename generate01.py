@@ -1,10 +1,23 @@
 # import Image from pillow
-from PIL import Image
+from PIL import Image, ImageDraw
 
 
 def generateArt():
   print("Generating art...")
-  image = Image.new("RGB", (128, 128))
+  imageSizePx = 128
+  imageBgColor = (255, 255, 255)
+  image = Image.new("RGB", 
+  size=(imageSizePx, imageSizePx),
+  color=imageBgColor)
+
+  # draw basic lines
+  draw = ImageDraw.Draw(image)
+  lineXy = ((0,0),(imageSizePx,imageSizePx))
+
+  lineColor=(0,0,0)
+  draw.line(lineXy, fill=(0,0,0), width=1)
+
+
   image.save('test.png')
 
 if __name__ == "__main__":  #cannot run this file as a module/imported
