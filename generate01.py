@@ -12,10 +12,11 @@ def generateArt():
 
   # draw basic lines
   draw = ImageDraw.Draw(image)
-  lineXy = ((0,0),(imageSizePx,imageSizePx))
 
-  lineColor=(0,0,0)
-  draw.line(lineXy, fill=(0,0,0), width=1)
+  for i in range(10):
+    lineXy = ((0,0),(imageSizePx,imageSizePx))
+    lineColor=(0,0,0)
+    draw.line(lineXy, fill=(0,0,0), width=1)
 
 
   image.save('test.png')
