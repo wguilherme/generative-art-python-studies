@@ -1,5 +1,6 @@
 # import Image from pillow
 from PIL import Image, ImageDraw
+import random
 
 
 def generateArt():
@@ -14,7 +15,15 @@ def generateArt():
   draw = ImageDraw.Draw(image)
 
   for i in range(10):
-    lineXy = ((0,0),(imageSizePx,imageSizePx))
+    randomPoint1 = (
+      random.randint(0, imageSizePx),
+      random.randint(0, imageSizePx)
+    )
+    randomPoint2 = (
+      random.randint(0, imageSizePx),
+      random.randint(0, imageSizePx)
+    )
+    lineXy = (randomPoint1, randomPoint2)
     lineColor=(0,0,0)
     draw.line(lineXy, fill=(0,0,0), width=1)
 
