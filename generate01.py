@@ -13,7 +13,7 @@ def randomColor():
 
     # I want a bright, vivid color, so max V and S and only randomize HUE.
     h = random.random()
-    s = 1
+    s = 0.9
     v = 1
     floatRgb = colorsys.hsv_to_rgb(h, s, v)
 
@@ -43,13 +43,13 @@ def generateArt(collection: str, name: str):
     imagePath = os.path.join(outputDir, f"{name}.png")
 
     # Set size parameters.
-    rescale = 2
+    rescale = 5
     imageSizePx = 128 * rescale
     padding = 12 * rescale
 
     # Create the directory and base image.
     os.makedirs(outputDir, exist_ok=True)
-    bg_color = (0, 0, 0)
+    bg_color = (255, 255, 255)
     image = Image.new("RGB", (imageSizePx, imageSizePx), bg_color)
 
     # How many lines do we want to draw?
