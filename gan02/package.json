@@ -1,0 +1,11 @@
+{
+  "name": "gan02",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "nodemon --exec python3 main.py"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

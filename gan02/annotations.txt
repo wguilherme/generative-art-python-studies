@@ -1,0 +1,14 @@
+sudo pip install mtcnn
+
+run .py file with nodemon
+
+nodemon --exec python3 main.py
+
+
+
+
+for run script with filewatch / live reload:
+
+yarn dev
+or
+npm run dev
